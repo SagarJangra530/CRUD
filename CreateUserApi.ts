@@ -2,10 +2,17 @@ export class CreateUserApi{
       Create_data(data)
       {
         console.log(data);
-     fetch("https://localhost:5001/api/assignment/"+(document.getElementById("uname")as HTMLInputElement).value, {
+     fetch("http://localhost:5000/api/user/add", {
          method: "POST",
-         headers: new Headers({'content-type': 'application/json'}),
+         headers: {'Content-Type': 'application/json'},
+         mode : "no-cors",
          body: data,
-     })
+     }).catch(Error=>console.log(Error));
      } 
     }
+
+
+
+
+
+

@@ -1,9 +1,11 @@
 <html>
 <head>
 <title>Register</title>
+<script>var exports = {};</script>
+
 </head>
 <body>
-<form method="" action="">
+<form class="contact-form" method="POST" action="">
 <table border="3" align="center" width="100%" style=" padding: 5px; background-color: rgb(136, 145, 145);" >
 <tr >
 <th>Name</th>
@@ -32,12 +34,12 @@
 
         <tr>
         <th>Email</th>
-        <td><input type="email" required/></td>
+        <td><input id="email" type="email" required/></td>
         </tr>
         
         <tr>
         <th>Alt-Email</th>
-        <td><input type="altemail" required/></td>
+        <td><input id="altemail" type="email" required/></td>
         </tr>
         
         
@@ -63,7 +65,11 @@
         
         <tr>
             <th>Gender</th>
-            <td><input type="text" id="gender"></input></td>
+            <td><select id="gender">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                
+            </select></td>
         </tr>
         
         
@@ -88,32 +94,32 @@
     <option value="current">Current</option>
      <option value="work">Work</option>
     <option value="home">Home</option>
-    <input type="text" required/></select>
+    <input type="text" id="cnv" required/></select>
 
     Country Code
      <select id="cc">
         <option value="ind">IND</option></select>
     Area Code
-    <select id="cc">
+    <select id="ac">
         <option value="fbd">fbd</option>
     </select></td>
 </tr>
 
 <tr>
     <th>Contact No 2 :</th>
-    <td><select id="cn">
+    <td><select id="cn1">
         <option value="mobile">Mobile</option>
         <option value="ll">Landline</option>
         <option value="current">Current</option>
          <option value="work">Work</option>
         <option value="home">Home</option>
-        <input type="text" /></select>
+        <input type="text" id="cnv1"/></select>
     
         Country Code
-         <select id="cc">
+         <select id="cc1">
             <option value="ind">IND</option></select>
         Area Code
-        <select id="cc">
+        <select id="ac1">
             <option value="fbd">fbd</option>
         </select></td>
     </tr>
@@ -121,19 +127,19 @@
 
     <tr>
         <th>Contact No 3:</th>
-        <td><select id="cn">
+        <td><select id="cn2">
             <option value="mobile">Mobile</option>
             <option value="ll">Landline</option>
             <option value="current">Current</option>
              <option value="work">Work</option>
             <option value="home">Home</option>
-            <input type="text" /></select>
+            <input type="text" id="cnv2"/></select>
         
             Country Code
-             <select id="cc">
+             <select id="cc2">
                 <option value="ind">IND</option></select>
             Area Code
-            <select id="cc">
+            <select id="ac2">
                 <option value="fbd">fbd</option>
             </select></td>
         </tr>
@@ -141,18 +147,21 @@
 <tr>
     
 <th>Address</th>
-<td> 
-     Current   : 
-     <input type="text">
+<td>
+   Current :  <input type="text" id="line">
     City <select id="c">
         <option value="fbd">Faridabad</option>
         <option value="dli">Delhi</option>
     </select>
-    State <select id="c">
+    State <select id="s">
         <option value="hry">Haryana</option>
         <option value="dli">Punjab</option>
     </select>
-    Pincode <input type="text">
+    Country : <select id=acountry>
+        <option value="india">India</option>
+        <option value="France">France</option>
+    </select>
+    Pincode <input id="apincode" type="text">
 </td>
 </tr>
 
@@ -162,16 +171,20 @@
     <th>Address</th>
     <td> 
        
-        Permanent : <input type="text">
-        City <select id="c">
+        Permanent : <input id="line1" type="text">
+        City <select id="c1">
             <option value="fbd">Faridabad</option>
             <option value="dli">Delhi</option>
         </select>
-        State <select id="c">
+        State <select id="s1">
             <option value="hry">Haryana</option>
             <option value="dli">Punjab</option>
         </select>
-        Pincode <input type="text">
+        Country : <select id="acountry1">
+            <option value="india">India</option>
+            <option value="France">France</option>
+        </select>
+        Pincode <input id="apincode1" type="text">
     </td>
     </tr>
 
@@ -179,12 +192,14 @@
 
 
 
-<td colspan="2" align="center"><input type="submit" value="Save My Data"/>
+<td colspan="2" align="center"><input type="submit" id="savemydata" value="Save My Data"/>
 <input type="reset" value="Reset Data"/>
 </td>
 </tr>
 </table>
 </form>
+<script data-main="CreateUserJsonData.js" src="https://requirejs.org/docs/release/2.3.6/minified/require.js"></script>
+
 </body>
 </html>
 
